@@ -6,6 +6,7 @@ randomNumber2 = Math.floor(randomNumber2 * 6) + 1;
 
 var image1Selector = document.querySelector('.img1');
 var image2Selector = document.querySelector('.img2');
+var headerSelector = document.querySelector('h1');
 
 if(randomNumber1 === 1){
     image1Selector.src = "./images/dice1.png";
@@ -46,5 +47,8 @@ else if (randomNumber2 === 6){
 }
 
 if (randomNumber1 > randomNumber2){
-    
+    headerSelector.textContent = "Player1 Wins!";
+}
+else if (randomNumber2 > randomNumber1){
+    headerSelector.textContent = "Player2 Wins!";
 }
